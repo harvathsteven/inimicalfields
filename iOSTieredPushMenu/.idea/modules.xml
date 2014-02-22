@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/NestedPushMenusIOS.iml" filepath="$PROJECT_DIR$/.idea/NestedPushMenusIOS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/iOSTieredPushMenu.iml" filepath="$PROJECT_DIR$/.idea/iOSTieredPushMenu.iml" />
     </modules>
   </component>
 </project>
