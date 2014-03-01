@@ -1,13 +1,3 @@
-/**
- * mlpushmenu.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
- */
 ;( function( window ) {
 	
 	'use strict';
@@ -109,6 +99,10 @@
 				self._resetMenu();
 				el.removeEventListener( self.eventtype, bodyClickFn );
 			};
+
+            $(".closeable").click(function () {
+                self._resetMenu();
+            });
 
 			// open (or close) the menu
 			this.trigger.addEventListener( this.eventtype, function( ev ) {
@@ -236,6 +230,16 @@
 			}
 		}
 	}
+
+    // automated link delay before menu close
+    $(".delayable").click(function(e) {
+        var anchor = $(this), h;
+        h = anchor.attr('href');
+        e.preventDefault();
+        anchor.animate({'opacity' : 50}, 500, function() {
+            window.location = h;
+        });
+    });
 
 	// add to global namespace
 	window.mlPushMenu = mlPushMenu;
